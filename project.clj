@@ -10,6 +10,7 @@
                  [org.bitbucket.cowwoc/diff-match-patch "1.2"] ;; google diff patch
                  ]
   :profiles {:dev {:dependencies [[midje "1.9.9" :exclusions [org.clojure/clojure]]
+                                  [criterium "0.4.5"]
                                   ]
                    :plugins [[lein-midje "3.2.1"]]}}
   :repl-options {:init-ns difft.core})

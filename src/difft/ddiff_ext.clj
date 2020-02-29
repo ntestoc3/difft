@@ -21,6 +21,7 @@
                            :tag        [:black]})
 
 (defn cprint-str
+  "输出到字符串"
   ([diff] (cprint-str diff {:color-scheme default-color-schema}))
   ([diff opts]
    (->> opts
@@ -28,6 +29,7 @@
         (puget/cprint-str diff))))
 
 (defn print-html
+  "输出到html"
   ([diff] (print-html diff {:color-scheme default-color-schema
                             :width 80}))
   ([diff opts]
@@ -36,3 +38,5 @@
      (-> (str/replace r #"(?im)\R" "<br/>")
          (as-> $
              (str "<div>" $ "</div>"))))))
+
+
